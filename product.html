@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Main</title>
+        <title>Product</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -14,12 +14,17 @@
                 <span class="close" onclick="closeModal('loginModal')">&times;</span>
                 <form>
                     <label for="username">Email:</label><br>
-                    <input class="input" type="text" id="username" name="username"><br>
+                    <input class="input" type="text" id="username"
+                        name="username"><br>
                     <label for="password">Password:</label><br>
-                    <input class="input" type="password" id="password" name="password"><br><br>
-                    <button type="button" onclick="closeModal('loginModal')" class="button">Submit</button><br>
-                    <span>Don't have account? <button type="button" class="registerBtn" onclick="showModal('registerModal')">register</button></span>
-                  </form> 
+                    <input class="input" type="password" id="password"
+                        name="password"><br><br>
+                    <button type="button" onclick="closeModal('loginModal')"
+                        class="button">Submit</button><br>
+                    <span>Don't have account? <button type="button"
+                            class="registerBtn"
+                            onclick="showModal('registerModal')">register</button></span>
+                </form>
             </div>
         </div>
         <div id="myModal registerModal" class="modal">
@@ -33,13 +38,16 @@
                     <label for="phone">Phone Number</label><br>
                     <input type="text" class="input" name="phone"><br>
                     <label for="password">Password:</label><br>
-                    <input class="input" type="password" id="password" name="password"><br>
+                    <input class="input" type="password" id="password"
+                        name="password"><br>
                     <label for="confirmPassword">Confirm Password</label><br>
-                    <input type="password" class="input" name="confirmPassword" oninput="passwordValidation(this)">
+                    <input type="password" class="input" name="confirmPassword"
+                        oninput="passwordValidation(this)">
                     <p id="validation"></p> <br>
-                    
-                    <button type="button" onclick="closeModal('registerModal')" class="button">Register</button>
-                  </form> 
+
+                    <button type="button" onclick="closeModal('registerModal')"
+                        class="button">Register</button>
+                </form>
             </div>
         </div>
         <header>
@@ -71,7 +79,8 @@
                                     src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAw0lEQVR4nN3RPU5CURQEYCKFP7FxAdhQsgNNaCyloiMmVuwBlvAoTbSDChorraGBHYAQWIGN9hYUfOaFa3Lfi4mvlUlucSYz92TmlEr/GyjjDiO8oovzIsYTTLDDAlN8pZ8UMfewxW3EXeIip6vjIW/+xGM0t9GJXhVNDDAP3HEqPLNHOzJvZNHCPZ6xRoLTH/EHnn6Jcx3MV2G+QT8vSkLmRsRVsMIyvcRfbY/DljfMQtvvqBVp/ChkG+Il3DnT9oHgG2cBANbNYOAmAAAAAElFTkSuQmCC">
                             </a>
                         </li>
-                        <li><button class="login-button" id="myBtn" onclick="showModal('loginModal')">Login</button></li>
+                        <li><button class="login-button" id="myBtn"
+                                onclick="showModal('loginModal')">Login</button></li>
                         <li><a href="#">Register</a></li>
                     </ul>
                 </div>
@@ -127,11 +136,13 @@
                 </div>
                 <ul class="side-nav-list">
                     <li class="side-nav-item">
-                       
 
-                        <button class="side-nav-link" id="myBtn" onclick="showModal('loginModal')">Login</button>
+
+                        <button class="side-nav-link" id="myBtn"
+                            onclick="showModal('loginModal')">Login</button>
                     </li>
-                    <li class="side-nav-item"><button class="side-nav-link" onclick="showModal('registerModal')">Register</button></li>
+                    <li class="side-nav-item"><button class="side-nav-link"
+                            onclick="showModal('registerModal')">Register</button></li>
                     <li class="side-nav-item">
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZUlEQVR4nOXOsQmAQAxG4bMRCws3cBV38sAVMotLuYSl8CSQgIVFcmDlgx8uxQdXylcBC7ACFRgzUNGzOYMPQzsgwJTBl+E+gzab5/cQwW+dQBfBYvP0XcNf11yWlvgnFl0TjnQDX+u1M/zamUUAAAAASUVORK5CYII=">
@@ -151,20 +162,6 @@
             </nav>
         </header>
         <main>
-            <div class="padding shop-now">
-                <div class="first-element">
-                    <h1>fashion that likes to say yes</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Iure perspiciatis animi unde aliquam incidunt facere
-                        adipisci quas tempora dolores qua!</p>
-                    <button>Shop now</button>
-                </div>
-                <div class="second-element">
-                    <img
-                        src="https://img.freepik.com/free-photo/full-length-portrait-happy-family_171337-2281.jpg?w=2000"
-                        alt="photo">
-                </div>
-            </div>
             <div class="padding main-bar">
                 <div class="functions">
 
@@ -232,110 +229,44 @@
                     </section>
                 </div>
             </div>
-            <div class="padding popular-now">
-                <h1>popular now</h1>
-                <ul class="display-inline">
-                    <li>
-                        <a href="#" class="active">
-                            trending
-
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            bestsellers
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            new
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="#">
-
-                            on sale
-                        </a>
-
-                    </li>
-                </ul>
-                <div class="cards" id="cards">
-
+            <div class="padding productDetails">
+                <div class="pictures">
+                    <div id="single-picture"></div>
+                    <div id="multiple-picture"></div>
                 </div>
-            </div>
-            <div class="padding new-collection">
-                <section>
-                    <h1>new winter Collection</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quibusdam dolore vitae aperiam officiis unde, ut vero
-                        iure saepe ea quasi dolor qui ratione fuga temporibus
-                        cumque suscipit libero nihil optio?</p>
-                    <button>all collection</button>
+                <div class="info">
 
-                </section>
+                    <h1>winter collection - paris jacket</h1>
+                    <h3>$89.99 </h3>
+                        <div class="customize">
+                            <select name="size" id="size">
+                                <option value="L">L</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                            </select>
+                            <div>
+
+                                <label for="qty">QTY</label>
+                                <select name="qty" id="qty">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <label for="colors">Color</label>
+                            <div class="colorBtns" name="colors">
+                                
+                                <button class="color pink"></button><button class="color brown"></button><button class="color green"></button><button class="color grey"></button>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <button class="buy">buy this item</button>
+                    </div>
+            </div>
+            <div class="padding similar">
+                <h1>similar items</h1>
                 <div class="cards" id="new-collection-cards"></div>
-            </div>
-            <div class="padding sale">
-                <h2>
-                    season sale
-                </h2>
-                <h1>
-                    up to 70% off
-                </h1>
-            </div>
-            <div class="padding subscription">
-                <label for="subscription-input">Subscribe to Newsletter:</label>
-                <input class="input" type="text" name="subscription-input"
-                    placeholder="Your Mail">
-                <button class="button">Subscribe</button>
-
-            </div>
-            <div class="padding collection">
-                <h1>from our collection</h1>
-                <div class="content">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit. Reprehenderit, dolor consequuntur nisi
-                            enim
-                            voluptates accusamus labore in voluptas sit
-                            animi,
-                        </p>
-                    </div>
-                    <div class="buttons-container">
-                        <button class="button">
-                            winter
-                        </button>
-                        <button class="button">
-                            spring
-                        </button>
-                        <button class="button">
-                            summer
-                        </button>
-                        <button class="button">
-                            fall
-                        </button>
-                    </div>
-                </div>
-                <div id="collection-cards" class="cards">
-
-                </div>
-                <button class="button">show me more</button>
-            </div>
-            <div class="story">
-                <div></div>
-                <div>
-                    <h2>Story behind</h2>
-                    <img src="./img/logo2.png" alt="">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Voluptas repellendus nisi amet voluptate. Saepe quae
-                        numquam, dolor officia beatae sit debitis, harum
-                        suscipit aliquid iste, iure eum blanditiis veniam quo?</p>
-                    <button class="button">contact us</button>
-                </div>
             </div>
         </main>
         <footer class="padding">

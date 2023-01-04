@@ -16,34 +16,42 @@ const item = {
 
 const fillCards = () => {
   let cardsContainer = document.getElementById("cards");
-  let collectionCards = document.getElementById("collection-cards");
-  for (let i = 1; i <= 4; i++) {
-    let div = document.createElement("div");
-    cardsContainer.appendChild(div);
-    let img = document.createElement("img");
-    let strong = document.createElement("strong");
-    let span = document.createElement("span");
-    div.className = "card";
-    div.appendChild(img);
-    div.appendChild(strong);
-    div.appendChild(span);
-    img.src = item.img;
-    strong.innerHTML = item.name;
-    span.innerHTML = item.price;
+  if(cardsContainer) {
+      for (let i = 1; i <= 4; i++) {
+          let div = document.createElement("div");
+          cardsContainer.appendChild(div);
+          let img = document.createElement("img");
+          let a = document.createElement("a");
+          let span = document.createElement("span");
+          div.className = "card";
+          div.appendChild(img);
+          div.appendChild(a);
+          a.href = './product.html'
+          div.appendChild(span);
+          img.src = item.img;
+          a.innerHTML = item.name;
+          span.innerHTML = item.price;
+        }
+
   }
-  for (let i = 1; i <= 8; i++) {
-    let div = document.createElement("div");
-    collectionCards.appendChild(div);
-    let img = document.createElement("img");
-    let strong = document.createElement("strong");
-    let span = document.createElement("span");
-    div.className = "card";
-    div.appendChild(img);
-    div.appendChild(strong);
-    div.appendChild(span);
-    img.src = item.img;
-    strong.innerHTML = item.name;
-    span.innerHTML = item.price;
+  let collectionCards = document.getElementById("collection-cards");
+  if(collectionCards){
+
+      for (let i = 1; i <= 8; i++) {
+        let div = document.createElement("div");
+        collectionCards.appendChild(div);
+        let img = document.createElement("img");
+        let a = document.createElement("a");
+        let span = document.createElement("span");
+        div.className = "card";
+        div.appendChild(img);
+        div.appendChild(a);
+        a.href = './product.html'
+        div.appendChild(span);
+        img.src = item.img;
+        a.innerHTML = item.name;
+        span.innerHTML = item.price;
+      }
   }
 };
 
@@ -53,18 +61,19 @@ const fillNewCollectionCards = () => {
     let div = document.createElement("div");
     cardsContainer.appendChild(div);
     let img = document.createElement("img");
-    let strong = document.createElement("strong");
+    let a = document.createElement("a");
     let span = document.createElement("span");
     div.className = "card";
     let detailsDiv = document.createElement("div");
     detailsDiv.className = "cardDetails";
     div.appendChild(img);
     div.appendChild(detailsDiv);
-    detailsDiv.appendChild(strong);
+    detailsDiv.appendChild(a);
+    a.href = './product.html'
     detailsDiv.appendChild(span);
     img.src =
       "https://cdn.shopify.com/s/files/1/0095/2837/7391/products/image_5decf79d-d74a-4de2-9954-3c8b42d56478_800x.jpg?v=1614708130";
-    strong.innerHTML = item.name;
+    a.innerHTML = item.name;
     span.innerHTML = item.price;
   }
 };
@@ -77,22 +86,11 @@ navMenuBtn.addEventListener("click", function () {
 
 let modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
 let btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// };
 
-// When the user clicks on <span> (x), close the modal
-
-// span.onclick = function () {
-//   modal.style.display = "none";
-// };
 
 const closeModal = e => {
     const modal =document.getElementById(`myModal ${e}`)
@@ -104,7 +102,6 @@ const showModal = e => {
     
     modal.style.display = 'block'
 }
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -113,9 +110,7 @@ window.onclick = function (event) {
 
 const passwordValidation = e => {
     const password = document.querySelectorAll('#password')[1].value
-    console.log("🚀 ~ file: app.js:116 ~ passwordValidation ~ password", password)
     let validation = document.getElementById('validation')
-    console.log("🚀 ~ file: app.js:119 ~ passwordValidation ~ e.value", e.value)
     if(password === e.value){
         validation.innerHTML = 'Passwords are matching'
         validation.style.color = 'green'
@@ -125,5 +120,23 @@ const passwordValidation = e => {
     }
 
 }
+
+const fillProduct = () =>{
+    let picture = document.getElementById('single-picture')
+    if(picture){
+        let img = document.createElement('img')
+        picture?.appendChild(img)
+        img.src= item.img
+        let multiple = document.getElementById('multiple-picture')
+        for(let i = 1; i <= 3; i++){
+            let img = document.createElement('img')
+            multiple.appendChild(img)
+            img.src= item.img
+        }
+        
+    }
+}
+
+fillProduct()
 fillCards();
 fillNewCollectionCards();

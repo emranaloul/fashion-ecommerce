@@ -455,11 +455,11 @@ a.active {
 }
 
 .card strong,
-span {
+span,.card a {
     text-align: center;
 }
 
-.card strong {
+.card strong, .card a {
     text-transform: uppercase;
     margin: 1rem 0;
 }
@@ -863,4 +863,100 @@ form {
     color: blueviolet;
     text-decoration: underline;
     text-transform: capitalize;
+}
+
+.pictures{
+    display: flex;
+    flex-direction: column;
+}
+.productDetails{
+    margin: 3rem auto;
+    display: flex;
+
+}
+.productDetails > div{
+    max-width: 50%;
+}
+
+#multiple-picture img{
+    max-width: 33%;
+}
+.info{
+    padding: 3rem;
+    align-items: center;
+}
+.info h1{
+    color: var(--dark);
+    text-transform: capitalize;
+    font-weight: 400;
+    /* border-bottom: 3px solid var(--light);  
+    padding: 1rem; */
+   
+}
+
+.info h3{
+    color: var(--light);
+    display: block  ;
+    width: fit-content;
+    text-transform: capitalize;
+    font-weight: 400;
+    border-top: 3px solid var(--light);  
+    padding: 1rem 3rem 1rem 0rem;
+}
+
+.customize{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.customize select{
+    padding: .5rem;
+    border: 1px solid var(--light);
+}
+ 
+.color{
+    padding: .7rem;
+    border: 0;
+}
+.pink{
+    background-color: pink;
+}
+.brown{
+    background-color: brown;
+}
+.green{
+    background-color: green;
+
+}
+.grey{
+    background-color: grey;
+}
+.colorBtns button{
+   margin: 8px;
+}
+.colorBtns{
+    border: 1px solid var(--light);
+}
+.info label{
+    margin: auto 0;
+}
+#qty{
+    height: 100%;
+}
+.buy{
+    background-color: var(--dark);
+    border: 0;
+    color: var(--light);
+    width: 100%;
+    padding: 1rem;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    font-size: 15px;
+}
+.similar h1{
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--light);
 }
