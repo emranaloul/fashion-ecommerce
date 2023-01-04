@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="myModal loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                <form>
+                    <label for="username">Email:</label><br>
+                    <input class="input" type="text" id="username" name="username"><br>
+                    <label for="password">Password:</label><br>
+                    <input class="input" type="password" id="password" name="password"><br><br>
+                    <button type="button" onclick="closeModal('loginModal')" class="button">Submit</button><br>
+                    <span>Don't have account? <button type="button" class="registerBtn" onclick="showModal('registerModal')">register</button></span>
+                  </form> 
+            </div>
+        </div>
+        <div id="myModal registerModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('registerModal')">&times;</span>
+                <form>
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" class="input"><br>
+                    <label for="email">Email:</label><br>
+                    <input class="input" type="text" id="email" name="email"><br>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="text" class="input" name="phone"><br>
+                    <label for="password">Password:</label><br>
+                    <input class="input" type="password" id="password" name="password"><br>
+                    <label for="confirmPassword">Confirm Password</label><br>
+                    <input type="password" class="input" name="confirmPassword" oninput="passwordValidation(this)">
+                    <p id="validation"></p> <br>
+                    
+                    <button type="button" onclick="closeModal('registerModal')" class="button">Register</button>
+                  </form> 
+            </div>
+        </div>
+        <header>
+            <nav class="first-bar padding">
+                <div class="contact">
+                    <span>gadooo@mail.com</span>
+                    <span>+12 345-678-90</span>
+                </div>
+                <div>
+                    <ul class="nav">
+                        <li>
+                            <a href="#">
+
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZUlEQVR4nOXOsQmAQAxG4bMRCws3cBV38sAVMotLuYSl8CSQgIVFcmDlgx8uxQdXylcBC7ACFRgzUNGzOYMPQzsgwJTBl+E+gzab5/cQwW+dQBfBYvP0XcNf11yWlvgnFl0TjnQDX+u1M/zamUUAAAAASUVORK5CYII=">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvElEQVR4nM3RMUtCYRSH8SstUejk0hZIe4KDQ5OLQ1tjgzi0JC0OjbWKu7T5AfwIfQDHxgiqyV1wU4z4SXChy/W9b272jOec5/zhnCT5t+AcfVzhAFW0sgNlDALiDb798oZPtLNDJ2lzjOO09pOysM0MjXzKc9qc4wmPwjzkxUP08O5vbkOHmdiNekg+xQiriPiCUkg+w0dE/MJF7KdHGAbENbpF0jVesQyIUzQLE9MFFVziDvfooBaV9sYGGG+E6mEuSwMAAAAASUVORK5CYII=">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                                <img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAw0lEQVR4nN3RPU5CURQEYCKFP7FxAdhQsgNNaCyloiMmVuwBlvAoTbSDChorraGBHYAQWIGN9hYUfOaFa3Lfi4mvlUlucSYz92TmlEr/GyjjDiO8oovzIsYTTLDDAlN8pZ8UMfewxW3EXeIip6vjIW/+xGM0t9GJXhVNDDAP3HEqPLNHOzJvZNHCPZ6xRoLTH/EHnn6Jcx3MV2G+QT8vSkLmRsRVsMIyvcRfbY/DljfMQtvvqBVp/ChkG+Il3DnT9oHgG2cBANbNYOAmAAAAAElFTkSuQmCC">
+                            </a>
+                        </li>
+                        <li><button class="login-button" id="myBtn" onclick="showModal('loginModal')">Login</button></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="second-nav padding">
+                <ul class="nav">
+                    <li>
+                        <a href="#" onclick="clickSingleA(this)" class="single">
+                            Women
+                        </a>
+
+                    </li>
+                    <li>
+                        <a onclick="clickSingleA(this)" class="single"
+                            href="#">
+                            Men
+                        </a>
+
+                    </li>
+                    <li>
+                        <a onclick="clickSingleA(this)" class="single" href="#">Children</a>
+                    </li>
+                    <li>
+
+                        <a onclick="clickSingleA(this)" class="single" href="#">Collection</a>
+                    </li>
+                </ul>
+                <img src="/img/Logo.png" width="100 " alt="logo">
+
+                <ul class=" nav">
+
+                    <li>
+                        <a onclick="clickSingleA(this)" class="single" href="#">Spring</a>
+                    </li>
+                    <li>
+                        <a onclick="clickSingleA(this)" class="single" href="#">Summer</a>
+                    </li>
+                    <li>
+                        <a onclick="clickSingleA(this)" class="single" href="#">Fall</a>
+                    </li>
+                    <li>
+
+                        <a onclick="clickSingleA(this)" class="single" href="#">Winter</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="nav-menu-btn"><img
+                    src="https://img.icons8.com/ios-filled/15/FFFFFF/menu--v1.png"/></button>
+            <nav class="side-nav">
+                <div class="side-nav-header">
+
+                </div>
+                <ul class="side-nav-list">
+                    <li class="side-nav-item">
+                       
+
+                        <button class="side-nav-link" id="myBtn" onclick="showModal('loginModal')">Login</button>
+                    </li>
+                    <li class="side-nav-item"><button class="side-nav-link" onclick="showModal('registerModal')">Register</button></li>
+                    <li class="side-nav-item">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAZUlEQVR4nOXOsQmAQAxG4bMRCws3cBV38sAVMotLuYSl8CSQgIVFcmDlgx8uxQdXylcBC7ACFRgzUNGzOYMPQzsgwJTBl+E+gzab5/cQwW+dQBfBYvP0XcNf11yWlvgnFl0TjnQDX+u1M/zamUUAAAAASUVORK5CYII=">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvElEQVR4nM3RMUtCYRSH8SstUejk0hZIe4KDQ5OLQ1tjgzi0JC0OjbWKu7T5AfwIfQDHxgiqyV1wU4z4SXChy/W9b272jOec5/zhnCT5t+AcfVzhAFW0sgNlDALiDb798oZPtLNDJ2lzjOO09pOysM0MjXzKc9qc4wmPwjzkxUP08O5vbkOHmdiNekg+xQiriPiCUkg+w0dE/MJF7KdHGAbENbpF0jVesQyIUzQLE9MFFVziDvfooBaV9sYGGG+E6mEuSwMAAAAASUVORK5CYII=">
+                        <img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAw0lEQVR4nN3RPU5CURQEYCKFP7FxAdhQsgNNaCyloiMmVuwBlvAoTbSDChorraGBHYAQWIGN9hYUfOaFa3Lfi4mvlUlucSYz92TmlEr/GyjjDiO8oovzIsYTTLDDAlN8pZ8UMfewxW3EXeIip6vjIW/+xGM0t9GJXhVNDDAP3HEqPLNHOzJvZNHCPZ6xRoLTH/EHnn6Jcx3MV2G+QT8vSkLmRsRVsMIyvcRfbY/DljfMQtvvqBVp/ChkG+Il3DnT9oHgG2cBANbNYOAmAAAAAElFTkSuQmCC">
+                    </li>
+                    <li class="side-nav-item">
+                        gadooo@mail.com
+                    </li>
+                    <li class="side-nav-item">
+                        +12 345-678-90
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <main>
+            <div class="padding shop-now">
+                <div class="first-element">
+                    <h1>fashion that likes to say yes</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Iure perspiciatis animi unde aliquam incidunt facere
+                        adipisci quas tempora dolores qua!</p>
+                    <button>Shop now</button>
+                </div>
+                <div class="second-element">
+                    <img
+                        src="https://img.freepik.com/free-photo/full-length-portrait-happy-family_171337-2281.jpg?w=2000"
+                        alt="photo">
+                </div>
+            </div>
+            <div class="padding main-bar">
+                <div class="functions">
+
+                    <div>
+                        <span>
+                            <img
+                                src="https://img.icons8.com/emoji/15/null/united-kingdom-emoji.png"/>
+                            EN
+                            <i class="arrow down"></i>
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+
+                            USA
+                            <i class="arrow down"></i>
+                        </span>
+
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <ul>
+                        <li>
+                            <a href="">
+
+                                shopping cart
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="">
+
+                                wishlist (7)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                checkout
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                my account
+                            </a>
+                        </li>
+                    </ul>
+                    <section class="search">
+                        <input type="text" placeholder='Search'>
+                        <button>
+
+                            <img
+                                src="https://img.icons8.com/ios-filled/20/FFFFFF/search--v1.png"/>
+                        </button>
+
+                    </section>
+                    <section class="cart">
+                        <button>
+                            <img
+                                src="https://img.icons8.com/pastel-glyph/20/FFFFFF/shopping-cart--v2.png"/>
+                        </button>
+
+                        <span>$79.00</span>
+                    </section>
+                </div>
+            </div>
+            <div class="padding popular-now">
+                <h1>popular now</h1>
+                <ul class="display-inline">
+                    <li>
+                        <a href="#" class="active">
+                            trending
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            bestsellers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            new
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            on sale
+                        </a>
+
+                    </li>
+                </ul>
+                <div class="cards" id="cards">
+
+                </div>
+            </div>
+            <div class="padding new-collection">
+                <section>
+                    <h1>new winter Collection</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quibusdam dolore vitae aperiam officiis unde, ut vero
+                        iure saepe ea quasi dolor qui ratione fuga temporibus
+                        cumque suscipit libero nihil optio?</p>
+                    <button>all collection</button>
+
+                </section>
+                <div class="cards" id="new-collection-cards"></div>
+            </div>
+            <div class="padding sale">
+                <h2>
+                    season sale
+                </h2>
+                <h1>
+                    up to 70% off
+                </h1>
+            </div>
+            <div class="padding subscription">
+                <label for="subscription-input">Subscribe to Newsletter:</label>
+                <input class="input" type="text" name="subscription-input"
+                    placeholder="Your Mail">
+                <button class="button">Subscribe</button>
+
+            </div>
+            <div class="padding collection">
+                <h1>from our collection</h1>
+                <div class="content">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Reprehenderit, dolor consequuntur nisi
+                            enim
+                            voluptates accusamus labore in voluptas sit
+                            animi,
+                        </p>
+                    </div>
+                    <div class="buttons-container">
+                        <button class="button">
+                            winter
+                        </button>
+                        <button class="button">
+                            spring
+                        </button>
+                        <button class="button">
+                            summer
+                        </button>
+                        <button class="button">
+                            fall
+                        </button>
+                    </div>
+                </div>
+                <div id="collection-cards" class="cards">
+
+                </div>
+                <button class="button">show me more</button>
+            </div>
+            <div class="story">
+                <div></div>
+                <div>
+                    <h2>Story behind</h2>
+                    <img src="/img/logo2.png" alt="">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Voluptas repellendus nisi amet voluptate. Saepe quae
+                        numquam, dolor officia beatae sit debitis, harum
+                        suscipit aliquid iste, iure eum blanditiis veniam quo?</p>
+                    <button class="button">contact us</button>
+                </div>
+            </div>
+        </main>
+        <footer class="padding">
+            <div class="first">
+                <img src="/img/logo2.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
+                    fuga magni debitis ea adipisci laudantium at minima laborum
+                    sequi est cumque sed perspiciatis nulla sunt molestias
+                    reprehenderit labore, odit eius.</p>
+                <strong>created by ghaphberry,belgard,serbia</strong>
+                <span>
+
+                    &copy; 2017 - <span class="logo-name">Gabooo</span>.inc
+                </span>
+            </div>
+            <div class="lists">
+                <div>
+                    <h4>Links</h4>
+                    <ul>
+                        <li>
+                            <a href="">
+
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                signIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                register
+
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="">
+
+                                FAQ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+
+                                terms and conditions</li>
+                        </a>
+                    </ul>
+                </div>
+                <div>
+                    <h4>shopping</h4>
+                    <ul>
+
+                        <li>
+                            <a href="">
+                                shopping cart
+                            </a>
+
+                        </li>
+                        <li>
+                        </a>
+                        <a href="">
+                            winter
+                        </li>
+                        <li>
+
+                            <a href="">
+
+                                spring
+                            </a>
+                        </li>
+                        <li>
+                        </a>
+                        <a href="">
+                            summer
+                        </li>
+                        <li>
+
+                            <a href="">
+                                fall
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                collection
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contact-us">
+                <h4>contact us</h4>
+                <p>Get in touch with us via email phone, we are waiting for your
+                    call or message</p>
+                <button class="button">graphberry@gmail.com</button>
+                <div class="social-logos">
+                    <img
+                        src="https://img.icons8.com/ios-glyphs/15/FFFFFF/facebook-f.png"/>
+                    <img
+                        src="https://img.icons8.com/sf-regular-filled/15/FFFFFF/twitter.png"/>
+                    <img
+                        src="https://img.icons8.com/ios/15/FFFFFF/google-plus.png"/>
+                    <img
+                        src="https://img.icons8.com/ios/15/FFFFFF/globe--v1.png"/>
+                </div>
+            </div>
+            <script src="/app.js"></script>
+        </footer>
+    </body>
+</html>
